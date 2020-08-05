@@ -1,6 +1,5 @@
 .pre-header-row {
     background-color: #3f78e3;
-    font-size: 12px;
     padding: 0 12%;
 }
 .phone-loc-block, .phone-loc-block a, .social-block, .social-block a {
@@ -15,10 +14,9 @@
 .main-header {
     color: #3f78e3;
     box-shadow: 1px 1px 10px 1px #ccc;
-    padding: 0 12% 0 12%;
     background-color: transparent;
-    position: fixed;
     width: 100%;
+    padding: 0 12% 0 12%;
 }
 .main-header a {
     text-decoration: none;
@@ -46,10 +44,8 @@
 .business-soln-block {
     background-image: url("../images/h1.jpg");
     background-repeat:no-repeat;
-    background-size:contain;
-    height: 560px;
+    background-size:100% 100%;
     width: 100%;
-    padding: 210px 170px 0 170px;
 }
 .blue-text {
     color: #528ade;
@@ -59,4 +55,39 @@
 }
 .bold {
     font-weight: 800;
+}
+.carousel-block {
+    padding: 0 170px 0 170px;
+}
+.carousel-block .carousel-item {
+    display: inline-flex;
+}
+
+@media (min-width: 992px) {
+    .pre-header-row {
+        font-size: 12px;
+    }
+    .business-soln-block {
+        height: 430px;
+        padding: 160px 170px 0 140px;
+    }
+    .social-block {
+        text-align: right;
+    }
+    .main-header {
+        position: fixed !important;
+        top: 35px !important;
+    }
+}
+@media (max-width: 992px) {
+    .business-soln-block {
+        padding: 1% 0 0 14%;
+    }
+    .business-soln-block * {
+        font-size: 12px !important;
+    }
+    .main-header {
+        position: relative !important;
+        top: 0 !important;
+    }
 }
